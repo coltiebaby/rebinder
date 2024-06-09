@@ -1,4 +1,5 @@
 #include <string.h>
+#include <stdio.h>
 
 // OPTIONS
 const char* WORD_FOX = "fox";
@@ -13,11 +14,11 @@ void get_words(const char* option, char** buf) {
         "Four-score Men and Four-score more,\n"
         "Could not make Humpty Dumpty where he was before.";
 
-    if (option == WORD_FOX) {
+    if (strcmp(option, WORD_FOX) == 0) {
         *buf = fox;
     }
 
-    if (option == WORD_HD) {
+    if (strcmp(option, WORD_HD) == 0) {
         *buf = hd;
     }
 }
